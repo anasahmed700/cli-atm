@@ -1,7 +1,9 @@
+#!  /usr/bin/env node
+
 import inquirer from "inquirer";
 
 let myBalance: number = 10000;
-const myPin = 1234;
+const myPin: number = 1234;
 const pinAnswer = await inquirer.prompt([
     {
         name: "pin",
@@ -21,6 +23,7 @@ if (pinAnswer.pin === myPin) {
         }
     ])
 
+    
     if (optionAns.operation === "Withdraw") {
         let amountAns = await inquirer.prompt([
             {
